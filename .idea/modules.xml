@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/myinclinometer.iml" filepath="$PROJECT_DIR$/myinclinometer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inclinometer.iml" filepath="$PROJECT_DIR$/inclinometer.iml" />
       <module fileurl="file://$PROJECT_DIR$/tomsinclinometer/tomsinclinometer.iml" filepath="$PROJECT_DIR$/tomsinclinometer/tomsinclinometer.iml" />
     </modules>
   </component>

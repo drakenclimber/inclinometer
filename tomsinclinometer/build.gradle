@@ -1,4 +1,15 @@
 apply plugin: 'com.android.application'
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 1
+
+def gitVersion() {
+    def counter = 0
+    def process = "git rev-list master --first-parent --count".execute()
+    counter = process.text.toInteger()
+    return counter
+}
+
 
 android {
     compileSdkVersion 23
@@ -8,9 +19,10 @@ android {
         applicationId "com.tomhromatka.tomsinclinometer"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode gitVersion()
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -34,5 +46,11 @@ android.applicationVariants.all { variant ->
         options.links("http://d.android.com/reference/");
         exclude '**/BuildConfig.java'
         exclude '**/R.java'
+    }
+
+    variant.outputs.each { output ->
+        output.outputFile = new File(
+                output.outputFile.parent,
+                output.outputFile.name.replace(".apk", "-${variant.versionName}.apk"))
     }
 }
