@@ -1,5 +1,8 @@
 This repository contains an Android inclinometer application.  (An inclinometer measures the pitch/roll of a vehicle and is commonly used in off-roading.)
 
+The latest *.apk is available here:
+https://drive.google.com/file/d/0B6sSUGa5VtayOUZ6Y2RUbjVtaFU/view?usp=sharing
+
 A screenshot of the application in landscape orientation is shown below:
 ![](https://github.com/drakenclimber/inclinometer/blob/master/screenshots/landscape.png)
 
