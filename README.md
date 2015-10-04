@@ -1,2 +1,0 @@
-# inclinometer
-An android inclinometer
