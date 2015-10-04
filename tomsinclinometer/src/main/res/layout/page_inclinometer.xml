@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *******************************************************************************
+ *
+ *  Copyright 2011-2015 Tom Hromatka
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ *
+ *******************************************************************************
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wInclinometerPg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:orientation="vertical"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/wPitchRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="0sp"
+        android:layout_weight="0.5" >
+
+        <ImageView
+            android:id="@+id/wPitchCompass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/w_pitch_compass_accessibility_string"
+            android:src="@drawable/pitch_compass" />
+
+        <TextView
+            android:id="@+id/wPitchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/wPitchCompass"
+            android:layout_alignLeft="@+id/wPitchCompass"
+            android:layout_alignRight="@+id/wPitchCompass"
+            android:layout_alignTop="@+id/wPitchCompass"
+            android:gravity="center"
+            android:text="@string/w_initial_pitch_string"
+            android:textColor="@color/hromatka_white"
+            android:textSize="60sp"
+            android:typeface="monospace" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wRollRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5" >
+
+        <ImageView
+            android:id="@+id/wRollCompass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/w_roll_compass_accessibility_string"
+            android:src="@drawable/roll_compass" />
+
+        <TextView
+            android:id="@+id/wRollText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/wRollCompass"
+            android:layout_alignLeft="@+id/wRollCompass"
+            android:layout_alignRight="@+id/wRollCompass"
+            android:layout_alignTop="@+id/wRollCompass"
+            android:gravity="center"
+            android:text="@string/w_initial_roll_string"
+            android:textColor="@color/hromatka_white"
+            android:textSize="60sp"
+            android:typeface="monospace" >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>
